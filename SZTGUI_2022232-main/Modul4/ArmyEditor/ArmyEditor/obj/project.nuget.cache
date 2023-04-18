@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "qZbjRZOYSBw/0x41kxbNqFWdrwE6SWQlPLcYS4X5EduHbnvRw0mLNHakrRCfUDf7OjkXn6BEz1SsFow9DCYQ7g==",
+  "success": true,
+  "projectFilePath": "E:\\Programming\\gyakorlas\\SZTGUI_2022232-main\\Modul4\\ArmyEditor\\ArmyEditor\\ArmyEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\halac\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\halac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\halac\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+    "C:\\Users\\halac\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

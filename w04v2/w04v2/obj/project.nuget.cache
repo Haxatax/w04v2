@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "SF+hZOMofskxVYUMEMv0eG+b4hcA0Z1+VkrpvcoCvVA37Uc81d3sGdX/iomRMcSK9Es7bBgNktFCBxcPcEw/hw==",
+  "success": true,
+  "projectFilePath": "E:\\Programming\\gyakorlas\\w04v2\\w04v2\\w04v2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\halac\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\halac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\halac\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+    "C:\\Users\\halac\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

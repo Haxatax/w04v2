@@ -1,0 +1,92 @@
+﻿<Window x:Class="w04v2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:w04v2"
+        xmlns:vms="clr-namespace:w04v2.ViewModels"
+        xmlns:helpers="clr-namespace:w04v2.Helpers"
+    mc:Ignorable="d"
+        Title="RaceManager" Height="450" Width="800">
+    <Window.DataContext>
+        <vms:MainWindowViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <helpers:PassConverter x:Key="passconvert"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" ItemsSource="{Binding LeftLB}" SelectedItem="{Binding SelectedFromLeft}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="{Binding Hasracepermit,Converter={StaticResource passconvert}}" BorderBrush="Black" BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="{Binding Name}" FontSize="14" FontWeight="Bold"/>
+                            <Label Content="{Binding Personalbest}" ContentStringFormat="Personal Best:{0}" Grid.Row="1"/>
+                            <Label Content="{Binding Presentbest}" ContentStringFormat="Present Best:{0}" Grid.Row="1" Grid.Column="1"/>
+                            <Label Content="{Binding Organisation}" ContentStringFormat="Organisation:{0}" Grid.Row="2"/>
+                            <Label Content="{Binding Racenr}" ContentStringFormat="RaceNr:{0}" Grid.Row="2" Grid.Column="1"/>
+                            <Label Content="{Binding MarketValue}" ContentStringFormat="Marketvalue:{0}" Grid.Row="2" Grid.Column="2"/>
+
+                        </Grid>                        
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Grid.Column="1" ItemsSource="{Binding RightLB}" SelectedItem="{Binding SelectedFromRight}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="{Binding Hasracepermit,Converter={StaticResource passconvert}}" BorderBrush="Black" BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="{Binding Name}" FontSize="14" FontWeight="Bold"/>
+                            <Label Content="{Binding Personalbest}" ContentStringFormat="Personal Best:{0}" Grid.Row="1"/>
+                            <Label Content="{Binding Presentbest}" ContentStringFormat="Present Best:{0}" Grid.Row="1" Grid.Column="1"/>
+                            <Label Content="{Binding Organisation}" ContentStringFormat="Organisation:{0}" Grid.Row="2"/>
+                            <Label Content="{Binding Racenr}" ContentStringFormat="RaceNr:{0}" Grid.Row="2" Grid.Column="1"/>
+                            <Label Content="{Binding MarketValue}" ContentStringFormat="Marketvalue:{0}" Grid.Row="2" Grid.Column="2"/>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+        <StackPanel Grid.Column="2">
+            <Button Content="Load Data" Command="{Binding LoadDataCommand}" Margin="10" Padding="10"/>
+            <Button Content="Add to the Race" Command="{Binding AddtoRaceCommand}" Margin="10" Padding="10"/>
+            <Button Content="Remove from the Race" Command="{Binding RemovefromRaceCommand}" Margin="10" Padding="10"/>
+            <Label Content="Name of the Save" HorizontalAlignment="Center" Padding="6" FontSize="14"/>
+            <TextBox x:Name="savename" Text="{Binding SaveName, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Padding="6" FontSize="13"/>
+            <Label Content="Date of the Save" HorizontalAlignment="Center" Padding="6" FontSize="14"/>
+            <TextBox x:Name="savedate" Text="{Binding SaveDate, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Padding="6" FontSize="13"/>
+            <Button Content="Save" Command="{Binding SaveDataCommand}" Margin="10" Padding="10"/>
+            <Button Content="Inspect" Command="{Binding InspectCommand}" Margin="10" Padding="10"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
